@@ -25,4 +25,20 @@ Run DownloadPsychToolbox('~/Documents/MATLAB/')
 Get the libdc1394-22 on Synaptic if there is a problem running Screen  
 
 Now activate the second monitor (Datapixx monitor)  
-Run XOrgConfCreator and allow it to create the X configuration file
+Run XOrgConfCreator and allow it to create the X configuration file.  
+Run XOrgConfSelector and make sure the configuration file is selected.  
+Log out and log back in.  At this point the Datapixx monitor should be screen 1.  Note that there is not an xorg.conf file in /etc/X11/ as NVIDIA driver installation would normally try and create; instead, there are configuration files in the folder /etc/X11/xorg.conf.d  
+
+Installing PLDAPS  
+Install git:  
+sudo apt-get install git  
+https://help.github.com/articles/set-up-git/#platform-linux  
+git config --global user.name <my name>
+git config --global user.email <my email address>
+Generate the ssh key.  I use the name as a passphrase.  
+sudo apt-get install xclip  
+Create clone of my PLDAPS fork  
+sudo git clone https://github.com/lpl1977/PLDAPS.git  
+Set the upstream fork to be the HukLab fork  
+https://help.github.com/articles/syncing-a-fork/  
+
