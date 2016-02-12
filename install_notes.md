@@ -42,3 +42,4 @@ sudo git clone https://github.com/lpl1977/PLDAPS.git
 Set the upstream fork to be the HukLab fork  
 https://help.github.com/articles/syncing-a-fork/  
 
+Install Datapixx toolbox from VPixx website.  Make sure the toolbox takes precedence over the Psychtoolbox versions.
