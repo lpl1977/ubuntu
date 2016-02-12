@@ -17,12 +17,12 @@ Only download MATLAB 8.6
 Can set the initial working folder in Preferences->General
 
 Download Psychophysics Toolbox  
-http://psychtoolbox.org/download/#Linux
+http://psychtoolbox.org/download/#Linux  
 Use the subversion based installation  
 sudo apt-get install subversion  
 sudo apt-get install linux-lowlatency 
-Run DownloadPsychToolbox('~/Documents/MATLAB/')
-Get the libdc1394-22 on Synaptic if there is a problem running Screen
+Run DownloadPsychToolbox('~/Documents/MATLAB/')  
+Get the libdc1394-22 on Synaptic if there is a problem running Screen  
 
-Now activate the second monitor (Datapixx monitor)
+Now activate the second monitor (Datapixx monitor)  
 Run XOrgConfCreator and allow it to create the X configuration file
