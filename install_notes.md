@@ -13,7 +13,7 @@ Download Synaptic Package Manager
 
 Download MATLAB installer from the mathworks website; useful to keep the installer to easily download and update other toolboxes later.  Run the installer as  
 sudo ./install  
-Only download MATLAB 8.6  
+Download MATLAB 8.6 and image processing toolbox (needed by PLDAPS)
 Can set the initial working folder in Preferences->General
 
 Download Psychophysics Toolbox  
