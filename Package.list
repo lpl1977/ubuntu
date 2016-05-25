@@ -158,7 +158,6 @@ evolution-data-server-common			install
 evolution-data-server-online-accounts		install
 example-content					install
 eyelink-addapptomenu				install
-eyelink-dataviewer-2				install
 eyelink-display-software1.9			install
 eyelinkcapisamples-1.9				install
 eyelinkcore-1.9					install
