@@ -1,64 +1,49 @@
 ##Notes on installing Ubuntu 14.04 LTS and preparing for PLDAPS  
 
-####IMPORTANT TO DO THIS BEFORE STARTING:
---Start with only a single monitor connected.  
---Change NVIDIA driver to current tested version in Software and Updates (on 02/12/16 that is 352.63).  The most recent driver on the NVIDIA webiste does not appear to be, in general, compatible with lightdm (the windows manager).
+####Install Ubuntu 14.04 LTS  
+* Usually this is done from a USB stick you can create following instructions you can find on the internet, e.g.  http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx   
+* I did not use logical volume management on the rig machines.  
 
-####After installing Ubuntu 14.04 LTS use Software Updater to install updates.  
---Find Sofware Updater in the Ubuntu Software Center  
---Restart if requested  
---Try the following (not sure if it matters)  
+####Before anything else:
+1.  Start with only a single monitor connected.  
+2.  Change NVIDIA driver to current tested version in Software and Updates (on 02/12/16 that is 352.63).  The most recent driver on the NVIDIA webiste does not appear to be, in general, compatible with lightdm (the windows manager).
+
+####Get ready to install packages
+1.  Find Sofware Updater in the Ubuntu Software Center and lock it to the launcher   
+2.  Update software
+3.  Restart if requested  
+4.  Try the following (not sure if it matters)  
 ```
 sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get autoremove
 ```
+5.  Some useful programs to make sure are available  
+*  Synaptic Package Manager   
 
+####Install some packages (they can all go on one line)
+```
+sudo apt-get install build-essential git xclip gksu subversion linux-lowlatency   
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get autoremove
+```
 
-
-Download from here the files  
-Package.list  
-Repo.keys  
-sources.list  
-sources.list.save  
-These were created with the commands from http://askubuntu.com/questions/9135/how-to-backup-settings-and-list-of-installed-packages  
+####Install MATLAB
+1.  Download MATLAB installer from the mathworks website.  Keep the installer to easily download and update other toolboxes later.
+2.  Run the installer as  
 ```
-dpkg --get-selections > ~/Package.list  
-sudo cp -R /etc/apt/sources.list* ~/  
-sudo apt-key exportall > ~/Repo.keys  
-```
-and can be installed with    
-```
-sudo apt-key add ~/Repo.keys  
-sudo cp -R ~/sources.list* /etc/apt/  
-sudo apt-get update  
-apt-cache dumpavail > ~/temp_avail
-sudo dpkg --merge-avail ~/temp_avail
-rm ~/temp_avail
-sudo apt-get install dselect   
-sudo dpkg --set-selections < ~/Package.list  
-sudo dselect  
-```
-Follow the steps in dselect;  I don't think you need to replace the sources.  
-If this has completed successfully, then we should have all the necessary packages installed.  The following commands *should* be unnecessary or will report that there is nothing to install:
-```
-sudo apt-get update  
-sudo apt-get upgrade  
-sudo apt-get install build-essential  
-```
-Download Synaptic Package Manager
-
-Download MATLAB installer from the mathworks website; useful to keep the installer to easily download and update other toolboxes later.  Run the installer as  
 sudo ./install  
-Download MATLAB 8.6 and image processing toolbox (needed by PLDAPS)
-Can set the initial working folder in Preferences->General
+```
+3.  Download MATLAB 8.6 and image processing toolbox (needed by PLDAPS)
+4.  Set the initial working folder in Preferences->General
 
-Download Psychophysics Toolbox  
+####Download Psychophysics Toolbox  
 http://psychtoolbox.org/download/#Linux  
 Use the subversion based installation  
 sudo apt-get install subversion  
 sudo apt-get install linux-lowlatency 
-Run DownloadPsychToolbox('~/Documents/MATLAB/')  
+Run DownloadPsychToolbox('/home/username/Documents/MATLAB/')  
 Get the libdc1394-22 on Synaptic if there is a problem running Screen  
 
 Now activate the second monitor (Datapixx monitor)  
