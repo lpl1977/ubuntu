@@ -21,18 +21,23 @@ Repo.keys
 sources.list  
 sources.list.save  
 These were created with the commands from http://askubuntu.com/questions/9135/how-to-backup-settings-and-list-of-installed-packages  
+```
 dpkg --get-selections > ~/Package.list  
 sudo cp -R /etc/apt/sources.list* ~/  
 sudo apt-key exportall > ~/Repo.keys  
-
+```
 and can be installed with    
+```
+apt-cache dumpavail > ~/temp_avail
+sudo dpkg --merge-avail ~/temp_avail
+rm ~/temp_avail
 sudo apt-key add ~/Repo.keys  
 sudo cp -R ~/sources.list* /etc/apt/  
 sudo apt-get update  
 sudo apt-get install dselect   
 sudo dpkg --set-selections < ~/Package.list  
 sudo dselect  
-
+```
 
 Run the following to get compilers  
 sudo apt-get update  
