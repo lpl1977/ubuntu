@@ -9,17 +9,15 @@
 2.  Change NVIDIA driver to current tested version in Software and Updates (on 02/12/16 that is 352.63).  The most recent driver on the NVIDIA webiste does not appear to be, in general, compatible with lightdm (the windows manager).
 
 ####Get ready to install packages
-1.  Find Sofware Updater in the Ubuntu Software Center and lock it to the launcher   
-2.  Update software
-3.  Restart if requested  
+1.  Update software
+2.  Restart if requested  
+3.  Get Synaptic Package Manager
 4.  Try the following (not sure if it matters)  
 ```
 sudo apt-get upgrade
 sudo apt-get update
 sudo apt-get autoremove
 ```
-5.  Some useful programs to make sure are available  
-*  Synaptic Package Manager   
 
 ####Install some packages (they can all go on one line)
 ```
@@ -31,10 +29,7 @@ sudo apt-get autoremove
 
 ####Install MATLAB
 1.  Download MATLAB installer from the mathworks website.  Keep the installer to easily download and update other toolboxes later.
-2.  Run the installer as  
-```
-sudo ./install  
-```
+2.  Run the installer as `sudo ./install`
 3.  Download MATLAB 8.6 and image processing toolbox (needed by PLDAPS)
 4.  Set the initial working folder in Preferences->General
 
