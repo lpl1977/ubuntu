@@ -1,8 +1,18 @@
-Notes on installing Ubuntu 14.04 LTS and preparing for PLDAPS
+##Notes on installing Ubuntu 14.04 LTS and preparing for PLDAPS  
 
-Start with only a single monitor connected.
-After installing Ubuntu 14.04 LTS use Software Updater to install updates.  
-IMPORTANT TO DO THIS SECOND:  
+####Start with only a single monitor connected.  
+
+####After installing Ubuntu 14.04 LTS use Software Updater to install updates.  
+--Find Sofware Updater in the Ubuntu Software Center  
+--Restart if requested  
+--Try the following (not sure if it matters)  
+```
+sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get autoremove
+```
+
+####IMPORTANT TO DO THIS SECOND:  
 Change NVIDIA driver to current tested version in Software and Updates (on 02/12/16 that is 352.63).  The most recent driver on the NVIDIA webiste does not appear to be, in general, compatible with lightdm.
 
 Download from here the files  
