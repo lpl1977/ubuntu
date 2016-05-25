@@ -11,7 +11,7 @@
 ####Get ready to install packages
 1.  Update software
 2.  Restart if requested  
-3.  Get Synaptic Package Manager
+3.  Get Synaptic Package Manager; this will be important for later steps when certain libraries are missing.
 4.  Try the following (not sure if it matters)  
 ```
 sudo apt-get upgrade
