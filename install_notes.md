@@ -4,6 +4,25 @@ Start with only a single monitor connected.
 After installing Ubuntu 14.04 LTS use Software Updater to install updates.
 Change NVIDIA driver to current tested version in Software and Updates (on 02/12/16 that is 352.63).  The most recent driver on the NVIDIA webiste does not appear to be, in general, compatible with lightdm.
 
+Download from here the files  
+Package.list  
+Repo.keys  
+sources.list  
+sources.list.save  
+These were created with the commands from http://askubuntu.com/questions/9135/how-to-backup-settings-and-list-of-installed-packages  
+dpkg --get-selections > ~/Package.list  
+sudo cp -R /etc/apt/sources.list* ~/  
+sudo apt-key exportall > ~/Repo.keys  
+
+and can be installed with    
+sudo apt-key add ~/Repo.keys  
+sudo cp -R ~/sources.list* /etc/apt/  
+sudo apt-get update  
+sudo apt-get install dselect   
+sudo dpkg --set-selections < ~/Package.list  
+sudo dselect  
+
+
 Run the following to get compilers  
 sudo apt-get update  
 sudo apt-get upgrade  
