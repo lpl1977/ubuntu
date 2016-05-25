@@ -28,22 +28,23 @@ sudo apt-key exportall > ~/Repo.keys
 ```
 and can be installed with    
 ```
-apt-cache dumpavail > ~/temp_avail
-sudo dpkg --merge-avail ~/temp_avail
-rm ~/temp_avail
 sudo apt-key add ~/Repo.keys  
 sudo cp -R ~/sources.list* /etc/apt/  
 sudo apt-get update  
+apt-cache dumpavail > ~/temp_avail
+sudo dpkg --merge-avail ~/temp_avail
+rm ~/temp_avail
 sudo apt-get install dselect   
 sudo dpkg --set-selections < ~/Package.list  
 sudo dselect  
 ```
-
-Run the following to get compilers  
+Follow the steps in dselect;  I don't think you need to replace the sources.  
+If this has completed successfully, then we should have all the necessary packages installed.  The following commands *should* be unnecessary or will report that there is nothing to install:
+```
 sudo apt-get update  
 sudo apt-get upgrade  
 sudo apt-get install build-essential  
-
+```
 Download Synaptic Package Manager
 
 Download MATLAB installer from the mathworks website; useful to keep the installer to easily download and update other toolboxes later.  Run the installer as  
