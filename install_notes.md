@@ -72,3 +72,4 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java7-installer
 ```
+5.  Finally install the hasp driver for your Data Viewer license key, which can be downloaded from the following link: http://sentinelcustomer.safenet-inc.com/sentineldownloads/?s=&c=all&p=all&o=Linux&t=Runtime+%26+Device+Driver&l=all#
