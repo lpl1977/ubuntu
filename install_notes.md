@@ -65,5 +65,10 @@ This can come from VPixx website, but I had to get several files from VPixx and 
 2.  Add the repositories for SR-Research  
   * deb http://download.sr-support.com/software SRResearch main
   * deb http://download.sr-support.com/
-3.  Download the depository for the 64 bit Dataviewer (as of May 25, 2016 still in beta):  https://drive.google.com/a/sr-research.com/file/d/0B6lPq22M74XKVnN1cU5QcTBiekU/view?usp=drive_web
-4.  
+3.  Download and install the depository for the 64 bit Dataviewer (as of May 25, 2016 still in beta):  https://drive.google.com/a/sr-research.com/file/d/0B6lPq22M74XKVnN1cU5QcTBiekU/view?usp=drive_web
+4.  Also install some packages:
+```
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+```
